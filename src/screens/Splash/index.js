@@ -1,6 +1,6 @@
 
 import React  from 'react'
-import {View,Text,StyleSheet,ActivityIndicator} from 'react-native'
+import {View,Text,StyleSheet,ActivityIndicator,Image} from 'react-native'
 
 class Splash extends React.Component{
     componentDidMount = () => {
@@ -21,6 +21,7 @@ class Splash extends React.Component{
     render(){
         return(
             <View style={styles.container}>
+                <Image source={require('../../assets/images/bmi.png')} style={styles.icon}/>
                 <Text style={styles.textIcon}>BMI<Text style={styles.textIcon2}>Analytics</Text></Text>
                 <ActivityIndicator size='large' color='white' style={styles.loading}/>
             </View>
@@ -47,5 +48,10 @@ const styles = StyleSheet.create({
     },
     loading:{
         marginTop:10
+    },
+    icon:{
+        resizeMode:'contain',
+        height:100,
+        width:100
     }
 })

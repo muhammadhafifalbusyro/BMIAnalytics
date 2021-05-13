@@ -93,7 +93,7 @@ class Home extends React.Component{
                 </View>
                 {
                     this.state.load?
-                    (<Text style={styles.resultText}>BMI INDEX: {this.state.BMIIndex}</Text>
+                    (<Text style={styles.resultText}>BMI INDEX : {this.state.BMIIndex}</Text>
                     ):
                     (
                         false
@@ -101,7 +101,7 @@ class Home extends React.Component{
                 }
                 {
                     this.state.load?
-                    (<Text style={styles.resultText}>BMI RESULT: {this.state.resultBMI}</Text>
+                    (<Text style={{...styles.resultText,paddingTop:5}}>BMI RESULT : {this.state.resultBMI}</Text>
                     ):
                     (
                         false
